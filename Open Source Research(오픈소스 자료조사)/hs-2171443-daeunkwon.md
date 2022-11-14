@@ -1,15 +1,4 @@
-
-OSS Team Project_ Week11 개인별 과제
-
-2171443 권다은
-
----
-
-Main idea: 전자출결 + 강의실 좌석 예약
-
-=======
 ### OSS Team Project_ Week11 개인별 과제
-
 ##### 2171443 권다은
 
 ------
@@ -20,16 +9,11 @@ Sub idea: 음성 인식을 통한 수업 내용 정리
 *Seat_Reservation_System 위주로 진행함
 
 조건1) 계획한 서비스의 방향성을 고려해야함
-
-
 조건2) 마크다운문서(.md)로 작성해야함
 
----
+
 
 오픈 소스 설명
-=======
-조건2) 마크다운문서(.md)로 작성해야함
-
 ------
 
 > 오픈 소스 설명
@@ -90,11 +74,7 @@ Sub idea: 음성 인식을 통한 수업 내용 정리
 
    - Java, CSS, HTML
 
-3. Server Architecture
-
-   ![server architecture](C:\Users\user\Desktop\server architecture.png)
-
-4. 강의실 자리 예약 시스템 구조
+3. 강의실 자리 예약 시스템 구조
 
 - 강의실 별 자리 지정
 
@@ -113,14 +93,6 @@ Sub idea: 음성 인식을 통한 수업 내용 정리
 
 
 계획했던 서비스와 가장 부합.
-
-
-
-
-Source Link
-
-https://github.com/hs-2171443-daeunkwon/Seat-Reservation-System.git
-
 
 =======
 > Source Link
