@@ -58,3 +58,43 @@ OS 상에서 애플리케이션을 실행하는 수준으로
 <h3>오픈소스 선정이유</h3>
 : 우리가만드는 앱이 실행되면서 가동중지시가니 없는지확인해야하고 
 만약에 실행되고 있는 컨테이너가 다운된다면 다른컨테이너를 다시 시작 하게하기 위함이다
+<br>
+
+
+
+<hr>
+<br>
+<h5><WAS(Web Application Server)></h5>
+<br>
+ <h3>WAS의 개념</h3>
+<br>
+WAS는 웹서버와 웹 컨테이너의 결합으로 다양한 기능을 컨테이너에 구현하여 다양한 역할을 수행할 수 있는 서버
+DB 조회나 로직 처리를 요구하는 동적 컨텐츠를 제공하기 위해 만들어진 Application Server
+Web contatiner 혹은 Servlet Container라고도 불린다.
+Container란 jsp, Servlet을 실행시킬 수 있는 소프트웨어를 말한다.
+WAS의 기능
+프로그램 실행 환경과 DB접속 기능 제공
+<br>
+<h3>***************Apache Tomcat************</h3>
+<br>
+<h3>주요기능</h3>
+JSP/Servlet Container중 하나로 사용자에게 JSP요청을 받으면 서블릿으로 바꾸어 실행
+SP 페이지를 웹서버에 요청하면 이 페이지를 해석하고 실행
+Web Server에서 요청한 동적 페이지를 읽어 프로그램을 실행
+그 결과를 다시 HTML로 재구성하여 Web Server에게 전달
+<br>
+<h3>*********라이선스********</h3>
+이 소프트웨어는  Apache License 2.0의 라이센스 에 속한다.
+<br>
+<h3>**************특징************</h3>
+<br>
+Servlet Container를 지원함
+플랫폼에 제약이 없음(Windows, Linux, Unix)
+
+ 어플리케이션 개발 및 운영시에 가장 많이 사용
+Tomcat내부에 Web Server와 Web Container의 기능이 들어있으므로 Tomcat이 Apache를 포함하고 있으나 Apache와 Tomcat을 연동해서 사용하는 것이 성능상의 이점이 있음
+Tomcat에 Apache가 내장되어있음에도 불구하고 Apache와 Tomcat을 연동하는 이유?
+
+정적 데이터를 처리할때에는 아파치가 더 성능이 뛰어나기때문이다.
+ 톰캣도 좋아지고 있지만, 이미지나 CSS같은 정적데이터는 아파치에서 처리
+하고, 톰캣은 동적페이지를 생성한다.
