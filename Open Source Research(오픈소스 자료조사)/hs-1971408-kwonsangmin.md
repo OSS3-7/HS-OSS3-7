@@ -60,7 +60,7 @@ OS 상에서 애플리케이션을 실행하는 수준으로
 만약에 실행되고 있는 컨테이너가 다운된다면 다른컨테이너를 다시 시작 하게하기 위함이다
 <br>
 <hr>
-<h4>아파치 웹서버(Apache)</h4>
+<h3>아파치 웹서버(Apache)</h3>
 <br>
 [https://github.com/apache/ignite](https://github.com/apache/ignite)
 <br>
@@ -104,7 +104,7 @@ Apache 서버는 여러 요청을 처리할 수 있다.
 <br>
 <hr>
 <br>
-<h5><WAS(Web Application Server)></h5>
+<h3><WAS(Web Application Server)></h3>
 <br>
  <h3>WAS의 개념</h3>
 <br>
