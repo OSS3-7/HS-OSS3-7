@@ -27,6 +27,9 @@ Deep Learning Boom 음성인식 방법, End-to-End 학습
 즉, 그냥 통째로 Input, Output넣어서 문법과 발음까지 한꺼번에 모두 학습
 자연어처리 분야에서 제안된 RNN기반 Seq2seq를 음성인식에 적용
 
+선정 이유 : 기존 음성인식에 대한 오픈소스들은 영어기반으로 음성언어를 문자데이터로 전환해 처리함, 하지만 
+Kospeech는 한국어 기반 자연어 처리와 딥러닝으로 인한 기능적 향상에 상당한 개선이 이루어짐 또한 모듈식 확장이 가능한 툴킷이기에 선정하였습니다.
+
 https://songys.github.io/2021Langcon/data/%5BLangCon2021%5D%20Korean-Speech-Recognition.pdf Kospeech관련 PPT
 
 https://github.com/react-native-voice/voice
