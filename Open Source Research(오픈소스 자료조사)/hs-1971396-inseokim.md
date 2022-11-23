@@ -1,3 +1,17 @@
+https://github.com/scouter-project/scouter
+모니터링 오픈소스
+모니터링 시스템은 프로젝트 또는 프로그램에서 발생하는 활동을 정기적으로 관찰하고 기록하는 것
+또한 프로젝트의 모든 측면에 대한 정보를 일상적으로 수집하는 프로세스
+즉, 강의실에서 학생들의 출석 및 활성을 실시간으로 모니터링 하기 위한 시스템입니다.
+라이센스는 Apache Lucebse를 사용합니다
+선정 이유 : 웹 기반이 아닌 이클립스 기반의 애플리케이션 클라이언트로 빠른 반응 속도로 실시간 모니터링에 적합함
+또한 간단한 설치와 한글을 지원합니다.
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e9628a9-4ace-4e4a-8107-0bf48cc45b57/Untitled.png)
+위의 표를 보았을 때 사용자에 대한 지표로 활성 사용자, 최근 사용자와 오늘 방문자를 확인할 수 있습니다.
+사용자는 시스템에서 응용 프로그램 서비스를 사용하고 서비스는 시스템에서 리소스를 사용합니다.
+웹 API : HTTP 프로토콜을 통해 카운터, XLog, 프로필 및 기타 성능 메트릭을 가져오기 위한 스카우터 웹 API입니다.
+모듈로는 Agent, Java Agent, Host Agent, Server, Client, ... 등이 존재합니다
+
 https://github.com/rinaldoclemente/Airplane-Seats-Reservation
 비행기 좌석 예약 관리 웹사이트,
 직사각형 패턴(6x10자석) 예약된 좌석(빨간색), 예약 안된 자석(녹색) 등 다양한 색상으로
