@@ -1,8 +1,4 @@
-Apache HBase
-
-보고서에 들어갈 내용
-
----
+Apache HBase_ 보고서에 들어갈 내용
 
 1. Apache HBase란?
 
@@ -20,9 +16,7 @@ Apache HBase
 
 ---
 
-Apache HBase
-
-오픈 소스 자료 조사 내용 요약
+Apache HBase_ 오픈 소스 자료 조사 내용 요약
 
 1. 오픈소스 설명
    - NoSQL중 하나로서 HDFS에 저장된 데이터에 대한 실시간 읽기 및 쓰기 기능을 지원하는 비관계형 분산 데이터베이스 시스템
