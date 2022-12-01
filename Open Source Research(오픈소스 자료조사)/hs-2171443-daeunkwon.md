@@ -33,3 +33,7 @@ Apache HBase
    - 좌석 배치도 DB, QR 이미지 DB 관리
 4. 라이선스
    - Apache 2.0
+5. 오픈소스 링크 
+   - https://github.com/apache/hbase
+   - https://scienceon.kisti.re.kr/commons/util/originalView.do?cn=JAKO201813742065722&oCn=JAKO201813742065722&dbt=JAKO&journal=NJOU00431883
+   - https://flipdata.tistory.com/76
