@@ -1,3 +1,19 @@
+https://github.com/prometheus/prometheus
+Prometheus는 Cloud Native Computing Foundation사에서 만든 오픈 소스 시스템 모니터링 및 경고 툴킷, 
+언어 : GO
+라이센스 : Apache License 2.0
+메트릭 수집, 시각화, 알림, 서비스 디스커버리 기능을 모두 제공
+간단히 Prometheus 설명
+•	고차원 데이터 모델을 구현, 시계열은 메트릭 이름과 key-value 쌍으로 식별됨
+•	PromQL을 통한 강력한 쿼리들
+•	뛰어난 데이터 시각화 (with Grafana)
+•	custom format을 통해 효율적인 데이터 저장
+•	각 서버는 안정성을 위해 독립적이며 로컬 저장소에만 의존
+•	정확한 alert
+•	많은 클라이언트 라이브러리들
+•	pull 방식의 데이터 수집 (push 방식도 가능)
+
+
 https://github.com/rinaldoclemente/Airplane-Seats-Reservation
 비행기 좌석 예약 관리 웹사이트,
 직사각형 패턴(6x10자석) 예약된 좌석(빨간색), 예약 안된 자석(녹색) 등 다양한 색상으로
