@@ -57,12 +57,19 @@
 
 
 	<br>
-	<hr/>
+ - __*서비스 내 역할*__
+  	<br>
+		실시간 참여자 및 좌석정보를 전송해준다.
+
+ - __*github 주소 :*__ 
+ 		https://github.com/apache/kafka.git
+		<br>
+		<hr/>
  - __*라이선스*__
 		Apache License 2.0
-	<br>
-	<hr/>
--	__*사용 언어*__
+		<br>
+		<hr/>
+ - __*사용 언어*__
 		Java, Scala
 
 
