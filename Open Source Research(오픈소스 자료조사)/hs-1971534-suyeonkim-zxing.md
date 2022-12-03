@@ -19,7 +19,8 @@
 
 
 ### 4.제약사항
-<img src="Open Source Research(오픈소스 자료조사)/스크린샷 2022-12-04 오전 2.12.35.png">
+<img width="366" alt="스크린샷 2022-12-04 오전 2 12 35" src="https://user-images.githubusercontent.com/117635203/205453751-949bad54-99de-43d7-a828-e4edd5ce48d8.png">
+
 format에 맞는 제품을 사용해야한다.
 
 
