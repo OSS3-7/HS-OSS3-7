@@ -1,37 +1,56 @@
-## 11주차 오픈소스소프트웨어
+# Apache Cayenne
 
-### OSS3-7/HS-OSS3-7
+Apache Cayenne 은 Apache 라이선스에 따라 라이선스가 부여된 오픈 소스 지속성 프레임워크로 ORM(개체 관계형 매핑) 및 원격 서비스를 제공합니다.
 
-1971093 김수정
+Cayenne은 다양한 독특하고 강력한 기능을 통해 다양한 지속성 요구를 해결할 수 있습니다. Cayenne은 하나 이상의 데이터베이스 스키마를 Java 개체에 직접 매끄럽게 바인딩하여 atomic commit 및 rollback, SQL generation, joins, sequences 등을 관리합니다.
+
+Cayenne은 유연성이나 디자인을 희생하지 않고 사용하기 쉽게 설계되었다. 이를 위해 Cayenne은 데이터베이스 리버스 엔지니어링 및 생성과 Velocity 기반 클래스 생성 엔진을 지원한다. 이러한 모든 기능은 완전히 작동하는 GUI 도구인 CayenneModeler를 통해 직접 제어할 수 있다. 암호화된 XML 또는 주석 기반 구성이 필요하지 않습니다. 전체 데이터베이스 스키마를 GUI 기반의 Cayenne Modeler를 사용하여 몇 분 내에 Java 객체에 직접 매핑할 수 있습니다.
+
+Cayenne은 캐싱, 완전한 개체 쿼리 구문, 관계 프리페칭, 온디맨드 개체 및 관계 오류, 개체 상속, 데이터베이스 자동 감지, 일반 지속형 개체를 비롯한 수많은 다른 기능을 지원합니다. 가장 중요한 것은 Cayenne이 거의 모든 프로젝트 규모로 확장하거나 축소할 수 있다는 것입니다.
+
+## Features 
+
+Cayenne은 CayenneModeler와 함께 배포됩니다. 이 도구는 RDBMS 스키마의 리버스 엔지니어링, 개체 관계형 매핑 프로젝트 편집, 영구 개체용 Java 소스 코드 생성 및 기타 기능을 지원하는 완전한 GUI 매핑 도구입니다.
+
+## DB-first-flow 
+
+Cayenne을 사용하면 데이터베이스라는 단일 위치에서 데이터 모델을 설계할 수 있습니다. 다른 레이어(OR 매핑 및 Java 개체)는 CayenneModeler 또는 빌드 스크립트를 통해 자동으로 동기화되므로 반복할 필요가 없습니다. 이러한 접근 방식을 "데이터베이스 우선"이라고 합니다. 모델이 여러 계층에서 동기화되도록 하여 개발 시간을 절약하고 오류를 방지합니다. 또한 매우 유연합니다. Liquibase 또는 Flyway와 같은 일반적인 DB 마이그레이션 프레임워크와 잘 작동하고 개체 구조 사용자 지정을 허용하며 반복적인 스키마 진화를 위해 설계되었습니다.
+
+## Transparent transactions 
+
+대부분의 ORM 프레임워크에서는 수동으로 또는 Spring과 같은 외부 도구를 사용하여 트랜잭션을 관리해야 합니다. 또한 개체 간의 관계를 순회할 때 항상 트랜잭션 범위 내에 있는지 확인해야 합니다. Cayenne은 눈에 띄게 다른 접근 방식을 취하여 사소한 코드를 많이 작성하지 않아도 됩니다. 트랜잭션 관리는 뒤에서 자동으로 이루어집니다. 개체 그래프는 특별한 고려 사항 없이 필요에 따라 느리게 확장할 수 있습니다.
+
+## Object Context
+
+Cayenne 지속성 API의 핵심에는 ObjectContext가 있습니다. ObjectContext는 작업 단위로 생각할 수 있습니다. 영구 개체의 자체 복사본이 있습니다. JPA EntityManager와 모호하게 유사하지만 ObjectContext는 버전 제어 클라이언트에 더 가깝습니다. 읽기 또는 쓰기 작업이 진행 중인 경우를 제외하고는 데이터베이스에 연결되지 않으며 리소스(예: DB 연결)를 보유하지 않으며 닫을 필요가 없습니다.
+
+결과적으로 ObjectContext는 직렬화 가능하고 다소 가볍습니다. 컨텍스트는 중첩될 수 있습니다(하위 컨텍스트는 DB에 영향을 주지 않고 상위에서 읽고 쓸 수 있음). 기본 앱과 완전히 다른 JVM에서 실행할 수 있고 이진 웹 서비스를 통해 앱과 통신할 수 있는 ObjectContext 버전도 있습니다.
+
+## Extension API
+
+Cayenne 스택은 모든 프레임워크 서비스의 구성 및 바인딩을 담당하는 작은 DI(종속성 주입) 컨테이너를 중심으로 구축됩니다. 핵심 서비스 및 전략의 사용자 정의 구현을 정의하거나 기존 항목에 확장(예: 사용자 정의 값 유형)을 추가하는 간단한 API를 제공합니다. 또한 시스템 속성을 통해 많은 항목을 구성할 수 있습니다.
+
+카이엔은 진정한 모듈식입니다. 위에서 언급한 DI 컨테이너는 클래스 경로에서 추가 모듈의 자동 로드를 지원합니다. Cayenne 자체는 이를 활용하여 다양한 옵션 기능을 분리하고 옵션 모듈로 통합합니다. 자신의 코드로 동일한 작업을 수행할 수 있습니다.
+
+## Generic Objects
+
+기존의 Java ORM은 바이트코드 생성 또는 동적 프록시에 의존하여 영구 개체를 프레임워크와 "연결"합니다. 대조적으로 Cayenne 개체는 ORM 런타임과 상호 작용하기 위해 간단한 API 계약을 구현하지만 주석이나 "향상"을 요구하지 않고 임의로 구조화할 수 있습니다.
+
+이것은 몇 가지 흥미로운 가능성을 열어줍니다. 예를 들어 Cayenne은 모든 엔터티에 동적으로 매핑할 수 있는 맵 기반 "일반" 영구 개체를 제공합니다. 이는 코드를 다시 컴파일하지 않고 런타임에 ORM 모델을 생성할 수 있음을 의미합니다. DB 리버스 엔지니어링 기능과 결합하여 완전히 일반적인 데이터 도구 및 서비스를 구축할 수 있습니다.
+
+## Data Encryption
+
+전통적으로 미사용 DB 데이터를 보호하는 것은 전체 하드 드라이브 파티션을 암호화하는 데 그칩니다. Cayenne은 몇 단계 더 나아가 보다 안전하고 유연한 솔루션인 필드 레벨 데이터 암호화 기능이 있는 "cayenne-crypto" 모듈을 제공합니다.
+
+모델의 여러 테이블에 있는 열을 암호화된 것으로 지정할 수 있으며 Cayenne은 최소한의 오버헤드로 데이터를 투명하게 암호화 및 해독합니다. 기본 암호화 알고리즘은 128 또는 256비트 키를 사용하는 AES/CBC/PKCS#5입니다. 기타 유용한 기능으로는 키 해지, 데이터 압축, HMAC 서명이 있습니다.
+
+- 서비스 내 역할
+  - 학생 정보와 학생 별 수업 정보 관련 DB를 관리한다.
+- license
+  - Apache License 2.0 
+- 사용 언어
+  - Java
 
 
 
-### '좌석 예약'과 '음성 인식'에 관련된 오픈소스 및 자료
-
-
-
-#### 좌석 예약
-
-
-* ### [shashirajraja/Train-Ticket-*Reservation*-System](https://github.com/shashirajraja/Train-Ticket-Reservation-System)
-
-  * This is the website build for searching the Train Schedule , Seat Availability, Train Timings, Fare Enquiry, Trains Between Stations and Booking seats online.
-  * 해당 오픈소스 링크 : https://github.com/shashirajraja/Train-Ticket-Reservation-System.git
-  * 해당 오픈소스 선정 이유 : 
-    * 열차 좌석 예약 오픈소스여서 기차의 좌석 이용 가능 여부 확인과 온라인 좌석 예약을 이용할 수 있다고 생각하여 선정하였습니다.
-
-#### 음성 인식
-
-* ### [react-native-voice / voice](https://github.com/react-native-voice/voice)
-
-  * 🎤 React Native Voice Recognition library for iOS and Android (Online and Offline Support)
-  * 해당 오픈소스 링크 : https://github.com/react-native-voice/voice.git
-  * 해당 오픈소스 선정 이유 : 
-    * 핸드폰으로 좌석 예약을 할 수 있어야하는데 이 오픈소스에는 Android와 IOS를 전부 연결 할 수 있는 소스가 있기 때문에 선정하였습니다.
-
-* ### [alphacep](https://github.com/alphacep)/**[vosk-api](https://github.com/alphacep/vosk-api)**
-
-  * Offline speech recognition API for Android, iOS, Raspberry Pi and servers with Python, Java, C# and Node
-  * 해당 오픈소스 링크 : https://github.com/alphacep/vosk-api.git
-  * 해당 오픈소스 선정 이유 : 
-    * 오프라인 오픈 소스 음성 인식 툴킷인데 20개 이상의 언어 및 방언에 대한 음성 인식이 가능하다고 해서 선정하였습니다.
+github 주소 : https://github.com/apache/cayenne
