@@ -1,3 +1,26 @@
+Promatheus오픈소스(https://github.com/prometheus/prometheus)
+Promatheus는 메트릭 기반의 오픈소스 모니터링 시스템이며 ELK와 같은 로깅이 아니라, 
+대상 시스템으로부터 각종 모니터링 지표를 수집하여 저장하고 검색할 수 있는 시스템입니다, 
+또한 Cloud native Computing Foundation사에서 만든 오픈소스입니다.
+
+Promatheus 사용 가능 조건
+promatheus는 빌드하고 실행하려면 GO언어의 설치가 필요합니다. 
+
+Promatheus 라이센스 
+Apache License 2.0를 사용합니다.
+
+Promatheus가 우리 서비스에서 하는 역활
+모니터링에 대한 결과 정보를 User에 전달합니다.
+
+Promatheus의 특징
+첫 번째 특징은 고차원 데이터 모델을 구현, 시계열은 메트릭 이름과 Key-value 쌍으로 식별됨, 두 번째 특징, 유연한 쿼리 언어인 PromQL을 통해 성능 분석, 실시간 경고도 가능합니다, 
+세 번째 특징 구조가 간단해서 운영이 쉽고, 강력한 쿼리 기능을 가지고 있으며, Grafana를 통한 뛰어난 데이터 시각화를 지원합니다. 
+네 번째 특징으로는 Promatheus는 안정성을 추구하기에 각 서버에 독립적이며 로컬 저장소에만 의존합니다. 또한 많은 클라이언트 라이브러리들도 존재합니다. 
+다섯 번째 특징 Pulling 방식입니다, Promatheus는 Taget System에서 메트릭을 수집하는 방식으로 Pulling 방식을 사용하는데, Promatheus는 주기적으로 Exporter로 부터 메트릭을 읽어와서 수집하는 방식입니다, 보통 모니터링 시스템의 에이전트들은 에이전트가 모니터링 시스템으로 메트릭을 보내는 Push 방식을 사용합니다, 특히 Push 방식은 서비스가 오토 스켈링 등으로 가변적일 경우에 유리합니다, Pulling 방식은 모니터링 대상이 가변적을 변경될 경우, 모니터링 대상의 IP 주소들을 알 수 없기 때문에 어려운 점이 존재합니다. 
+여섯 번째 특징 Metric 수집, 수집하려는 대상 시스템이 Target System입니다. MySQL이나, Tomcat또는 VM과 같이 여러가지 자원이 모니터링 대상이 될 수 있습니다. 이 대상 시스템에서 메트릭을 Promatheus로 전송하기 위해서는 Exporter라는 것을 사용합니다. 
+
+
+
 https://github.com/rinaldoclemente/Airplane-Seats-Reservation
 비행기 좌석 예약 관리 웹사이트,
 직사각형 패턴(6x10자석) 예약된 좌석(빨간색), 예약 안된 자석(녹색) 등 다양한 색상으로
