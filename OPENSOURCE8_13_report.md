@@ -7,7 +7,7 @@
 
 
 
-<center><h3>3조 & 7조</h3></center>
+<center><h3>1조 & 3조</h3></center>
 
 
 
